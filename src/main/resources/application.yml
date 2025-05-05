@@ -1,0 +1,22 @@
+spring:
+  application:
+    name: backend-spring-cloud-config-server
+  profiles:
+    active: native
+  cloud:
+    config:
+      server:
+        native:
+          search-locations: "classpath:/config"
+
+server:
+  port: 8071
+
+  #In a Spring Cloud Config setup, setting the active profile to native tells Spring Cloud Config Server to:
+  # 1. Read configuration files from the local file system (or classpath)
+  # 2. Read configuration files instead of from a remote Git repository (which is the default).
+
+  # You can call under the following URLs
+  #http://localhost:8071/accounts/prod
+  #http://localhost:8071/accounts/qa
+
