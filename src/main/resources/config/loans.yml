@@ -1,7 +1,7 @@
 build:
   version: "3.0"
 
-accounts:
+loans:
   message: "Welcome to ABCBank loans related local APIs"
   contactDetails:
     name: "Contact us at 1234567890"
