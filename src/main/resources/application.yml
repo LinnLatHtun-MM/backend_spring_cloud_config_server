@@ -13,6 +13,11 @@ spring:
           clone-on-start: true #Clone the git repo during the startup of cloud config server
           force-pull: true #if there is any changes on remote repo, force pull during the startup of cloud config server
 
+#http://localhost:8071/encrypt with body t8P8o@example.com
+#http://localhost:8071/decrypt with body hfihfnjsdfsbfbh
+encrypt:
+  key: "0OuDTVWQ13KH3nBGpaA00IoVQ4yhAOJNTRlvFYxE81s="
+
 server:
   port: 8071
 
