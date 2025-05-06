@@ -2,12 +2,16 @@ spring:
   application:
     name: backend-spring-cloud-config-server
   profiles:
-    active: native
+    active: git #Actvie profile defined as git
   cloud:
     config:
       server:
-        native:
-          search-locations: "classpath:/config"
+        git:
+          uri: "https://github.com/LinnLatHtun-MM/ABC_Bank_Config.git"
+          default-label: main # Git branch Main
+          timeout: 5
+          clone-on-start: true #Clone the git repo during the startup of cloud config server
+          force-pull: true #if there is any changes on remote repo, force pull during the startup of cloud config server
 
 server:
   port: 8071
